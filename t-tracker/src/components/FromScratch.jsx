@@ -1,8 +1,9 @@
 import { useState } from "react";
 
 function FromScratch() {
+
   const [items, setItems] = useState([
-    {},
+  
   
   ]);
 
@@ -44,7 +45,7 @@ function FromScratch() {
       <ul>
         {items.map((item) => (
           <li key={item.id} className="text-center text-xl font-semibold py-4">
-            {item.taskname}
+            {item.taskname} {item.completed ? "✅" : "❌"}
           </li>
         ))}
       </ul>
