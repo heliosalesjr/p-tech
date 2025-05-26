@@ -46,6 +46,7 @@ function FromScratch() {
         {items.map((item) => (
           <li key={item.id} className="text-center text-xl font-semibold py-4">
             {item.taskname} {item.completed ? "✅" : "❌"}
+            <p>{item.id}</p>
           </li>
         ))}
       </ul>
