@@ -1,0 +1,1 @@
+import{w as o}from"./with-props-BCSotfiv.js";import{o as t}from"./chunk-DQRVZFIR-DT2EblYt.js";function m({}){return[{title:"Moodboard"},{name:"description",content:"Welcome to the moodboard project by Helio Sales Jr"}]}const a=o(function(){return t.jsx("h2",{className:"text-3xl",children:"Bem-vindo ao MoodBoard Mágico ✨"})});export{a as default,m as meta};
