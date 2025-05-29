@@ -25,6 +25,11 @@ export default function CreateBoard() {
     setInput("");
   };
 
+  // 🧼 Nova função: remover item por id
+  const removeItem = (id: number) => {
+    setItems((prev) => prev.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="max-w-2xl mx-auto">
       <h2 className="text-2xl font-bold mb-4">Criar novo moodboard ✨</h2>
@@ -71,8 +76,17 @@ export default function CreateBoard() {
         {items.map((item) => (
           <div
             key={item.id}
-            className="rounded border p-2 flex items-center justify-center text-center h-32 bg-white/10"
+            className="relative rounded border p-2 flex items-center justify-center text-center h-32 bg-white/10"
           >
+            {/* Botão de remover no canto superior direito */}
+            <button
+              onClick={() => removeItem(item.id)}
+              className="absolute top-1 right-1 text-red-400 hover:text-red-600 text-lg font-bold"
+              title="Remover item"
+            >
+              ✖
+            </button>
+
             {item.type === "text" && <span>{item.value}</span>}
             {item.type === "image" && (
               <img
