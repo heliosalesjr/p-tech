@@ -16,12 +16,20 @@ type Pages = {
   "/create": {
     params: {};
   };
+  "/boards": {
+    params: {};
+  };
+  "/board/:id": {
+    params: {
+      "id": string;
+    };
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/create";
+    page: "/" | "/create" | "/boards" | "/board/:id";
   };
   "routes/home.tsx": {
     id: "routes/home";
@@ -30,5 +38,13 @@ type RouteFiles = {
   "routes/create.tsx": {
     id: "routes/create";
     page: "/create";
+  };
+  "routes/boards.tsx": {
+    id: "routes/boards";
+    page: "/boards";
+  };
+  "routes/board.tsx": {
+    id: "routes/board";
+    page: "/board/:id";
   };
 };
